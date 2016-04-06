@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/antlr-feedstock.svg?sty
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/antlr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/antlr-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/antlr-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/antlr-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/antlr/badges/version.svg)](https://anaconda.org/conda-forge/antlr)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/antlr/badges/downloads.svg)](https://anaconda.org/conda-forge/antlr)
+
 
 Updating antlr-feedstock
 ========================
