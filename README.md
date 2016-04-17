@@ -3,11 +3,11 @@ About antlr
 
 Home: http://www.antlr2.org/
 
-Package license: http://www.antlr2.org/license.html
+Package license: BSD-3-clause and GPL-3.0 and Public Domain
 
 Feedstock license: BSD
 
-Summary: ANTLR, ANother Tool for Language Recognition, 2.7.7
+Summary: ANother Tool for Language Recognition (ANTLR)
 
 
 

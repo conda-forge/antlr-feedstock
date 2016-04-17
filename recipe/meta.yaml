@@ -9,23 +9,24 @@ source:
         - CharScanner.patch
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win]
+    skip: True  # [py3k]
 
 requirements:
     build:
-        - python >=2.7,<3
+        - python
     run:
         - python
 
 test:
     commands:
-        - antlr --help
+        - antlr-config --version
 
 about:
     home: http://www.antlr2.org/
-    license: http://www.antlr2.org/license.html
-    summary: ANTLR, ANother Tool for Language Recognition, 2.7.7
+    license: BSD-3-clause and GPL-3.0 and Public Domain
+    summary: ANother Tool for Language Recognition (ANTLR)
 
 extra:
     recipe-maintainers:
