@@ -1,14 +1,10 @@
 #!/bin/bash
 
-if [[ $(uname) != Darwin ]]; then
-    yum install -y gcc-java
-fi
-
-./configure --enable-java \
+./configure --prefix=$PREFIX \
             --enable-cxx \
             --enable-python \
             --enable-csharp \
-            --prefix=$PREFIX
+            --disable-java \
 
 make
 make install
