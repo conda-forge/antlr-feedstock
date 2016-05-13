@@ -5,7 +5,7 @@ Home: http://www.antlr2.org/
 
 Package license: BSD-3-clause and GPL-3.0 and Public Domain
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: ANother Tool for Language Recognition (ANTLR)
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/antlr-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/antlr-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/antlr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/antlr-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/antlr-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/antlr-feedstock/branch/master)
