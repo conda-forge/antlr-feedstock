@@ -10,15 +10,8 @@ source:
         - CharScanner.patch
 
 build:
-    number: 1
+    number: 2
     skip: True  # [win]
-    skip: True  # [py3k]
-
-requirements:
-    build:
-        - python
-    run:
-        - python
 
 test:
     commands:
@@ -27,7 +20,7 @@ test:
 about:
     home: http://www.antlr2.org/
     license: BSD-3-clause and GPL-3.0 and Public Domain
-    summary: ANother Tool for Language Recognition (ANTLR)
+    summary: 'ANother Tool for Language Recognition (ANTLR).'
 
 extra:
     recipe-maintainers:
