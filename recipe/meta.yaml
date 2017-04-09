@@ -16,8 +16,8 @@ build:
 test:
     commands:
         - antlr-config --version
-        - conda inspect linkages -n _test antlr  # [linux]
-        - conda inspect objects -n _test antlr  # [osx]
+        - conda inspect linkages -p ${PREFIX} antlr  # [linux]
+        - conda inspect objects -p ${PREFIX} antlr  # [osx]
 about:
     home: http://www.antlr2.org/
     license: BSD-3-clause and GPL-3.0 and Public Domain
