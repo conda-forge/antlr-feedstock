@@ -12,13 +12,14 @@ source:
 
 build:
   number: 4
-  skip: True  # [win32 or (win and py<-35)]
+  skip: True  # [win and py36]
   features:
     - vc14  # [win and (py35 or py36)]
 
-requeriments:
+requirements:
   build:
     - python  # [win]
+    - vc 14  # [win and (py35 or py36)]
 
 test:
   commands:
