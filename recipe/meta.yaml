@@ -12,11 +12,17 @@ source:
 
 build:
   number: 4
-  skip: True  # [win]
+  skip: True  # [win32 or (win and py<-35)]
+  features:
+    - vc14  # [win and (py35 or py36)]
+
+requeriments:
+  build:
+    - python  # [win]
 
 test:
   commands:
-    - antlr-config --version  # [not win]
+    - antlr-config --version
     - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
     - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
