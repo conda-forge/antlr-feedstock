@@ -1,29 +1,31 @@
+{% set version = "2.7.7" %}
+
 package:
-    name: antlr
-    version: 2.7.7
+  name: antlr
+  version: {{ version }}
 
 source:
-    fn: antlr-2.7.7.tar.gz
-    url: http://www.antlr2.org/download/antlr-2.7.7.tar.gz
-    sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
-    patches:
-        - CharScanner.patch
+  url: http://www.antlr2.org/download/antlr-{{ version }}.tar.gz
+  sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
+  patches:
+    - CharScanner.patch
 
 build:
-    number: 3
-    skip: True  # [win]
+  number: 4
+  skip: True  # [win]
 
 test:
-    commands:
-        - antlr-config --version
-        - conda inspect linkages -p ${PREFIX} antlr  # [linux]
-        - conda inspect objects -p ${PREFIX} antlr  # [osx]
+  commands:
+    - antlr-config --version  # [not win]
+    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
+    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+
 about:
-    home: http://www.antlr2.org/
-    license: BSD-3-clause and GPL-3.0 and Public Domain
-    summary: 'ANother Tool for Language Recognition (ANTLR).'
+  home: http://www.antlr2.org/
+  license: BSD-3-clause and GPL-3.0 and Public Domain
+  summary: 'ANother Tool for Language Recognition (ANTLR).'
 
 extra:
-    recipe-maintainers:
-        - ocefpaf
-        - kwilcox
+  recipe-maintainers:
+    - ocefpaf
+    - kwilcox
