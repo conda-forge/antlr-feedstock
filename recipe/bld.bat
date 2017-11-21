@@ -5,8 +5,10 @@ if "%ARCH%"=="32" (
 )
 
 
-copy %RECIPE_DIR%\antlr.vcxproj lib\cpp\
-if errorlevel 1 exit 1
+copy %RECIPE_DIR%\antlr.vcxproj lib\cpp\ || exit 1
 
 msbuild.exe /p:Platform=%PLATFORM% /p:Configuration=Release lib\cpp\antlr.vcxproj
 if errorlevel 1 exit 1
+
+copy lib\cpp\x64\Release\antlr.lib %LIBRARY_LIB% || exit 1
+copy %SRC_DIR%\lib\cpp\antlr\*.hpp %LIBRARY_INC% || exit 1
