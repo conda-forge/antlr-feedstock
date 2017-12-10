@@ -1,14 +1,15 @@
+{% set name = "antlr" %}
 {% set version = "4.7" %}
-{% set name = "antlr4" %}
+{% set sha256 = "30d1ea7b2f591ba1d7cacf3b4c1232df98783a8b64d5421eaf6bf1d4f7fcf478" %}
 
 package:
-  name: antlr
+  name: {{ name }}
   version: {{ version }}
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/antlr/antlr4/archive/4.7.tar.gz
-  sha256: 30d1ea7b2f591ba1d7cacf3b4c1232df98783a8b64d5421eaf6bf1d4f7fcf478
+  url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
   number: 0
@@ -16,7 +17,6 @@ build:
 requirements:
   build:
     - maven
-    - python >=3.6,<3.7
   run:
     - openjdk
 
