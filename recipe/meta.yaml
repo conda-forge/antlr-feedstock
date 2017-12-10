@@ -1,38 +1,45 @@
-{% set version = "2.7.7" %}
+{% set name = "antlr" %}
+{% set version = "4.7.1" %}
+{% set sha256 = "4d0714f441333a63e50031c9e8e4890c78f3d21e053d46416949803e122a6574" %}
 
 package:
-  name: antlr
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  url: http://www.antlr2.org/download/antlr-{{ version }}.tar.gz
-  sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
-  patches:
-    - CharScanner.patch
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-  number: 5
-  skip: True  # [win32 or (win and py<36)]
-  features:
-    - vc14  # [win and (py35 or py36)]
+  number: 0
+  skip: true  # [win32]
 
 requirements:
   build:
-    - python  # [win]
-    - vc 14  # [win and (py35 or py36)]
+    - maven
+  run:
+    - openjdk
 
 test:
   commands:
-    - antlr-config --version  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - antlr4
 
 about:
-  home: http://www.antlr2.org/
-  license: BSD-3-clause and GPL-3.0 and Public Domain
-  summary: 'ANother Tool for Language Recognition (ANTLR).'
+  home: http://www.antlr.org
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
+  summary: ANother Tool for Language Recognition (ANTLR).
+  description: >
+    ANTLR (ANother Tool for Language Recognition) is a powerful parser
+    generator for reading, processing, executing, or translating
+    structured text or binary files.
+  dev_url: https://github.com/antlr/antlr4
+  doc_url: https://github.com/antlr/antlr4/blob/master/doc/index.md
 
 extra:
   recipe-maintainers:
     - ocefpaf
     - kwilcox
+    - bollwyvl

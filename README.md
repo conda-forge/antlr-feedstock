@@ -1,14 +1,15 @@
 About antlr
 ===========
 
-Home: http://www.antlr2.org/
+Home: http://www.antlr.org
 
-Package license: BSD-3-clause and GPL-3.0 and Public Domain
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
 Summary: ANother Tool for Language Recognition (ANTLR).
 
+ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.
 
 
 Current build status
