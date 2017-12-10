@@ -26,14 +26,19 @@ test:
 
 about:
   home: http://www.antlr.org
-  license: BSD-3-clause
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE.txt
   summary: ANother Tool for Language Recognition (ANTLR).
   description: >
     ANTLR (ANother Tool for Language Recognition) is a powerful parser
     generator for reading, processing, executing, or translating
     structured text or binary files.
+  dev_url: https://github.com/antlr/antlr4
+  doc_url: https://github.com/antlr/antlr4/blob/master/doc/index.md
 
 extra:
   recipe-maintainers:
     - ocefpaf
     - kwilcox
+    - bollwyvl
