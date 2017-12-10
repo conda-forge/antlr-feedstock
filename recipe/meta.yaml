@@ -1,36 +1,37 @@
-{% set version = "2.7.7" %}
+{% set version = "4.7" %}
+{% set name = "antlr4" %}
 
 package:
   name: antlr
   version: {{ version }}
 
 source:
-  url: http://www.antlr2.org/download/antlr-{{ version }}.tar.gz
-  sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
-  patches:
-    - CharScanner.patch
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://github.com/antlr/antlr4/archive/4.7.tar.gz
+  sha256: 30d1ea7b2f591ba1d7cacf3b4c1232df98783a8b64d5421eaf6bf1d4f7fcf478
 
 build:
-  number: 5
-  skip: True  # [win32 or (win and py<36)]
-  features:
-    - vc14  # [win and (py35 or py36)]
+  number: 0
 
 requirements:
   build:
-    - python  # [win]
-    - vc 14  # [win and (py35 or py36)]
+    - maven
+    - python >=3.6,<3.7
+  run:
+    - openjdk
 
 test:
   commands:
-    - antlr-config --version  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
+    - antlr4
 
 about:
-  home: http://www.antlr2.org/
-  license: BSD-3-clause and GPL-3.0 and Public Domain
-  summary: 'ANother Tool for Language Recognition (ANTLR).'
+  home: http://www.antlr.org
+  license: BSD-3-clause
+  summary: ANother Tool for Language Recognition (ANTLR).
+  description: >
+    ANTLR (ANother Tool for Language Recognition) is a powerful parser
+    generator for reading, processing, executing, or translating
+    structured text or binary files.
 
 extra:
   recipe-maintainers:

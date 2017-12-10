@@ -1,14 +1,8 @@
-if "%ARCH%"=="32" (
-    set PLATFORM=Win32
-) else (
-    set PLATFORM=x64
-)
+set MAVEN_OPTS="-Xmx1G"
 
+REM cmd.exe /c mvn --projects=tool clean || echo ""
+cmd.exe /c mvn --projects=tool -DskipTests install || echo ""
 
-copy %RECIPE_DIR%\antlr.vcxproj lib\cpp\ || exit 1
+copy "%SRC_DIR%\tool\target\antlr4-%PKG_VERSION%-complete.jar" "%LIBRARY_LIB%\"
 
-msbuild.exe /p:Platform=%PLATFORM% /p:Configuration=Release lib\cpp\antlr.vcxproj
-if errorlevel 1 exit 1
-
-copy lib\cpp\x64\Release\antlr.lib %LIBRARY_LIB% || exit 1
-copy %SRC_DIR%\lib\cpp\antlr\*.hpp %LIBRARY_INC%\antlr || exit 1
+"%PYTHON%" "%RECIPE_DIR%\make_wrapper.py"

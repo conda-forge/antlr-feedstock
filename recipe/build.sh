@@ -1,19 +1,10 @@
 #!/bin/bash
+export MAVEN_OPTS="-Xmx1G"
 
-if [ $(uname) == Darwin ]; then
-    export CC=clang
-    export CXX=clang++
-    export MACOSX_DEPLOYMENT_TARGET="10.9"
-    export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
-    export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
-fi
+mvn --projects=tool clean
+mvn --projects=tool -DskipTests install
 
-./configure --prefix=$PREFIX \
-            --enable-cxx \
-            --disable-python \
-            --enable-csharp \
-            --disable-java \
+cp "${SRC_DIR}/tool/target/antlr4-${PKG_VERSION}-complete.jar" "${PREFIX}/lib/"
 
-make
-# No make check :-(
-make install
+"${PYTHON}" "${RECIPE_DIR}/make_wrapper.py"
+chmod +x "${PREFIX}/bin/antlr4"
