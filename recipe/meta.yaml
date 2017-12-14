@@ -11,7 +11,7 @@ source:
     - CharScanner.patch
 
 build:
-  number: 6
+  number: 7
   skip: True  # [win32 or (win and py<36)]
   features:
     - vc14  # [win and (py35 or py36)]
