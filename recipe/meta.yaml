@@ -12,14 +12,12 @@ source:
 
 build:
   number: 7
-  skip: True  # [win32 or (win and py<36)]
-  features:
-    - vc14  # [win and (py35 or py36)]
+  skip: True  # [win and py<36]
 
 requirements:
   build:
-    - python  # [win]
-    - vc 14  # [win and (py35 or py36)]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 test:
   commands:
@@ -30,7 +28,8 @@ test:
 about:
   home: http://www.antlr2.org/
   license: BSD-3-clause and GPL-3.0 and Public Domain
-  summary: 'ANother Tool for Language Recognition (ANTLR).'
+  license_file: LICENSE.txt
+  summary: 'ANother Tool for Language Recognition (ANTLR)'
 
 extra:
   recipe-maintainers:
