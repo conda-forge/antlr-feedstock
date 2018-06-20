@@ -7,21 +7,23 @@ Package license: BSD-3-clause and GPL-3.0 and Public Domain
 
 Feedstock license: BSD 3-Clause
 
-Summary: ANother Tool for Language Recognition (ANTLR).
+Summary: ANother Tool for Language Recognition (ANTLR)
 
 
 
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/antlr-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/antlr-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/antlr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/antlr-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/antlr-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/antlr-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/antlr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/antlr-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/antlr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/antlr-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/antlr-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/antlr-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/antlr/badges/version.svg)](https://anaconda.org/conda-forge/antlr)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/antlr/badges/downloads.svg)](https://anaconda.org/conda-forge/antlr)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-antlr-green.svg)](https://anaconda.org/conda-forge/antlr) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/antlr.svg)](https://anaconda.org/conda-forge/antlr) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/antlr.svg)](https://anaconda.org/conda-forge/antlr) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/antlr.svg)](https://anaconda.org/conda-forge/antlr) |
 
 Installing antlr
 ================
