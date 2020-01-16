@@ -1,6 +1,6 @@
 {% set name = "antlr" %}
-{% set version = "4.7.2" %}
-{% set sha256 = "46f5e1af5f4bd28ade55cb632f9a069656b31fc8c2408f9aa045f9b5f5caad64" %}
+{% set version = "4.8" %}
+{% set sha256 = "c8e41fa04e4d79ec2dc91dad9ddfd202b09b50fd59f17f3a10f52dbdffdaf70d" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
