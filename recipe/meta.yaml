@@ -1,15 +1,14 @@
 {% set name = "antlr" %}
 {% set version = "4.8" %}
-{% set sha256 = "c8e41fa04e4d79ec2dc91dad9ddfd202b09b50fd59f17f3a10f52dbdffdaf70d" %}
+{% set sha256 = "" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: c8e41fa04e4d79ec2dc91dad9ddfd202b09b50fd59f17f3a10f52dbdffdaf70d
 
 build:
   number: 0
@@ -25,7 +24,7 @@ test:
     - antlr4
 
 about:
-  home: http://www.antlr.org
+  home: https://www.antlr.org
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
