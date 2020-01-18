@@ -1,8 +1,15 @@
 #!/bin/bash
 export MAVEN_OPTS="-Xmx1G"
 
-mvn --projects=tool clean
-mvn --projects=tool -DskipTests install
+cd $SRC_DIR/runtime/Java
+
+mvn --batch-mode clean
+mvn --batch-mode install
+
+cd $SRC_DIR
+
+mvn --batch-mode --projects=tool clean
+mvn --batch-mode --projects=tool -DskipTests install
 
 cp "${SRC_DIR}/tool/target/antlr4-${PKG_VERSION}-complete.jar" "${PREFIX}/lib/"
 
