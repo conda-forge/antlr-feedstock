@@ -1,8 +1,11 @@
 set MAVEN_OPTS="-Xmx1G"
 
 cd %SRC_DIR%\runtime\Java
+
 cmd.exe /c mvn --batch-mode clean
 cmd.exe /c mvn --batch-mode install
+
+cd %SRC_DIR%
 
 cmd.exe /c mvn --batch-mode --projects=tool clean || echo ""
 cmd.exe /c mvn --batch-mode --projects=tool -DskipTests install || echo ""
