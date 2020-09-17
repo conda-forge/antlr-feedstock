@@ -1,6 +1,5 @@
 {% set name = "antlr" %}
 {% set version = "4.8" %}
-{% set sha256 = "" %}
 
 package:
   name: {{ name }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
-  sha256: c8e41fa04e4d79ec2dc91dad9ddfd202b09b50fd59f17f3a10f52dbdffdaf70d
+  sha256: 992d52444b81ed75e52ea62f9f38ecb7652d5ce2a2130af143912b3042a6d77e
 
 build:
   number: 1
