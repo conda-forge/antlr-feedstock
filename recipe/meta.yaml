@@ -21,6 +21,7 @@ requirements:
 test:
   commands:
     - antlr4
+    - grun
 
 about:
   home: https://www.antlr.org
