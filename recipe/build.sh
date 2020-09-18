@@ -3,6 +3,7 @@ export MAVEN_OPTS="-Xmx1G"
 
 cd $SRC_DIR
 
+mvn --batch-mode versions:set -DnewVersion=${PKG_VERSION}
 mvn --batch-mode --projects=runtime/Java,tool clean
 mvn --batch-mode --projects=runtime/Java,tool -DskipTests install
 
