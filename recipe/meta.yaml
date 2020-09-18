@@ -2,8 +2,8 @@
 {% set major_version = "4" %}
 {% set minor_version = "8" %}
 {% set revision = "1" %}
-{% set main_version = "{{ major_version }}.{{ minor_version }}" %}
-{% set version = "{{ main_version }}-{{ revision }}" %}
+{% set main_version = major_version + "." + minor_version %}
+{% set version = main_version + "-" + revision %}
 
 package:
   name: {{ name }}
