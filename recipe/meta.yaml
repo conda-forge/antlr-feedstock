@@ -1,15 +1,12 @@
 {% set name = "antlr" %}
-{% set major_version = "4" %}
-{% set minor_version = "8" %}
-{% set version = major_version + "." + minor_version %}
-{% set revision = "1" %}
+{% set version = "4.8" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}{{ major_version }}/archive/{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
   sha256: 992d52444b81ed75e52ea62f9f38ecb7652d5ce2a2130af143912b3042a6d77e
 
 build:
