@@ -1,16 +1,16 @@
 {% set name = "antlr" %}
-{% set version = "4.8" %}
+{% set version = "4.8_1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
+  url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version[:-2] }}.tar.gz
   sha256: 992d52444b81ed75e52ea62f9f38ecb7652d5ce2a2130af143912b3042a6d77e
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
