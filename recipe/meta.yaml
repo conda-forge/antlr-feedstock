@@ -1,14 +1,18 @@
 {% set name = "antlr" %}
 {% set version = "4.8" %}
-{% set sha256 = "" %}
+
+# sometimes part of the tag name (with the hyphen separator).
+# however, this has changed without warning (with a different sha256) in the past...
+{% set patch_level = "-1" %}
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  # this version drives maven options in build.sh/bld.bat
+  version: {{ version }}{{ patch_level.replace("-", "_") }}
 
 source:
   url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
-  sha256: c8e41fa04e4d79ec2dc91dad9ddfd202b09b50fd59f17f3a10f52dbdffdaf70d
+  sha256: 992d52444b81ed75e52ea62f9f38ecb7652d5ce2a2130af143912b3042a6d77e
 
 build:
   number: 0
@@ -22,6 +26,7 @@ requirements:
 test:
   commands:
     - antlr4
+    - grun
 
 about:
   home: https://www.antlr.org
@@ -41,3 +46,4 @@ extra:
     - ocefpaf
     - kwilcox
     - bollwyvl
+    - zklaus
