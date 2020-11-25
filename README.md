@@ -5,9 +5,13 @@ Home: https://www.antlr.org
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/antlr-feedstock/blob/master/LICENSE.txt)
 
 Summary: ANother Tool for Language Recognition (ANTLR).
+
+Development: https://github.com/antlr/antlr4
+
+Documentation: https://github.com/antlr/antlr4/blob/master/doc/index.md
 
 ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.
 
@@ -153,4 +157,5 @@ Feedstock Maintainers
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@kwilcox](https://github.com/kwilcox/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@zklaus](https://github.com/zklaus/)
 

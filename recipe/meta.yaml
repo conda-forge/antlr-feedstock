@@ -1,5 +1,5 @@
 {% set name = "antlr" %}
-{% set version = "4.8" %}
+{% set version = "4.9" %}
 
 # sometimes part of the tag name (with the hyphen separator).
 # however, this has changed without warning (with a different sha256) in the past...
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}{{ version[0] }}/archive/{{ version }}.tar.gz
-  sha256: 992d52444b81ed75e52ea62f9f38ecb7652d5ce2a2130af143912b3042a6d77e
+  sha256: 8ea492d2670bf7cf30b22bbc0391bc0b976652a8a4f8c08057d8bdb9f3817988
 
 build:
   number: 0
@@ -35,9 +35,7 @@ about:
   license_file: LICENSE.txt
   summary: ANother Tool for Language Recognition (ANTLR).
   description: >
-    ANTLR (ANother Tool for Language Recognition) is a powerful parser
-    generator for reading, processing, executing, or translating
-    structured text or binary files.
+    ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.
   dev_url: https://github.com/antlr/antlr4
   doc_url: https://github.com/antlr/antlr4/blob/master/doc/index.md
 
