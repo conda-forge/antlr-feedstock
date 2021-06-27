@@ -7,6 +7,8 @@ mvn --batch-mode versions:set -DnewVersion=${PKG_VERSION}
 mvn --batch-mode --projects=runtime/Java,tool clean
 mvn --batch-mode --projects=runtime/Java,tool -DskipTests install
 
+mkdir -p ${PREFIX}/lib ${PREFIX}/bin
+
 cp "${SRC_DIR}/tool/target/antlr4-${PKG_VERSION}-complete.jar" "${PREFIX}/lib/"
 
 echo '#!/bin/bash' > $PREFIX/bin/antlr4
