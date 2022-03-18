@@ -41,6 +41,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - tobias-fischer
     - ocefpaf
     - kwilcox
     - bollwyvl
