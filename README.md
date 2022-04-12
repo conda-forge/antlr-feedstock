@@ -13,7 +13,9 @@ Development: https://github.com/antlr/antlr4
 
 Documentation: https://github.com/antlr/antlr4/blob/master/doc/index.md
 
-ANTLR (ANother Tool for Language Recognition) is a powerful parser generator for reading, processing, executing, or translating structured text or binary files.
+ANTLR (ANother Tool for Language Recognition) is a powerful parser generator
+for reading, processing, executing, or translating structured text or binary
+files.
 
 
 Current build status
