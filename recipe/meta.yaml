@@ -1,4 +1,4 @@
-{% set version = "4.11.1" %}
+{% set version = "4.9.3" %}
 
 # sometimes part of the tag name (with the hyphen separator).
 # however, this has changed without warning (with a different sha256) in the past...
@@ -12,10 +12,10 @@ package:
 
 source:
   url: https://github.com/antlr/antlr{{ version[0] }}/archive/{{ version }}.tar.gz
-  sha256: 81f87f03bb83b48da62e4fc8bfdaf447efb9fb3b7f19eb5cbc37f64e171218cf
+  sha256: efe4057d75ab48145d4683100fec7f77d7f87fa258707330cadd1f8e6f7eecae
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
