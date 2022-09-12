@@ -24,6 +24,8 @@ requirements:
     - openjdk
 
 test:
+  requires:
+    - openjdk !=17.0.3  # [win]
   commands:
     - antlr4
     - grun
