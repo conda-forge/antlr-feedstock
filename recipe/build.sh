@@ -4,6 +4,8 @@
 cp $BUILD_PREFIX/share/gnuconfig/config.* .
 
 ./configure --prefix=$PREFIX \
+            --host="${HOST}" \
+            --build="${BUILD}" \
             --enable-cxx \
             --disable-python \
             --disable-csharp \
