@@ -43,6 +43,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - xylar
     - tobias-fischer
     - ocefpaf
     - kwilcox
