@@ -10,8 +10,7 @@ cp $BUILD_PREFIX/share/gnuconfig/config.* ./scripts/
             --build="${BUILD}" \
             --enable-cxx \
             --disable-python \
-            --disable-csharp \
-            --disable-shared \
+            --enable-csharp \
             --disable-java \
 
 make
