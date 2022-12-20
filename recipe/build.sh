@@ -3,7 +3,8 @@
 ./configure --prefix=$PREFIX \
             --enable-cxx \
             --disable-python \
-            --enable-csharp \
+            --disable-csharp \
+            --disable-shared \
             --disable-java \
 
 make
