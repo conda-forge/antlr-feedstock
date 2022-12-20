@@ -11,7 +11,7 @@ source:
     - CharScanner.patch
 
 build:
-  number: 8
+  number: 9
   skip: True  # [win and py<36]
 
 requirements:
@@ -27,7 +27,7 @@ about:
   home: http://www.antlr2.org/
   license: BSD-3-clause and GPL-3.0 and Public Domain
   license_file: LICENSE.txt
-  summary: 'ANother Tool for Language Recognition (ANTLR)'
+  summary: ANother Tool for Language Recognition (ANTLR)
 
 extra:
   recipe-maintainers:
