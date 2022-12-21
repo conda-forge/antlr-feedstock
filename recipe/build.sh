@@ -1,17 +1,22 @@
 #!/bin/bash
 
+set -xe
+
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/gnuconfig/config.* ./scripts/
+
 if [ $(uname) == Darwin ]; then
-    export CC=clang
-    export CXX=clang++
-    export MACOSX_DEPLOYMENT_TARGET="10.9"
-    export CXXFLAGS="-stdlib=libc++ $CXXFLAGS"
-    export CXXFLAGS="$CXXFLAGS -stdlib=libc++"
+    CSHARP=--disable-csharp
+else
+    CSHARP=--enable-csharp
 fi
 
 ./configure --prefix=$PREFIX \
+            --host="${HOST}" \
+            --build="${BUILD}" \
             --enable-cxx \
             --disable-python \
-            --enable-csharp \
+            ${CSHARP} \
             --disable-java \
 
 make
