@@ -13,5 +13,6 @@ bot:
   abi_migration_branches:
   - v4.9.3
   - osx-arm64-4.8
+  - antlr2
 conda_build:
   pkg_format: '2'
