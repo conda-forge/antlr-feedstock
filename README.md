@@ -1,11 +1,11 @@
-About antlr
-===========
+About antlr-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/antlr-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.antlr2.org/
 
 Package license: BSD-3-clause and GPL-3.0 and Public Domain
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/antlr-feedstock/blob/main/LICENSE.txt)
 
 Summary: ANother Tool for Language Recognition (ANTLR)
 
