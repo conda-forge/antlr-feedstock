@@ -8,10 +8,12 @@ source:
   url: http://www.antlr2.org/download/antlr-{{ version }}.tar.gz
   sha256: 853aeb021aef7586bda29e74a6b03006bcb565a755c86b66032d8ec31b67dbb9
   patches:
-    - CharScanner.patch
+    - 0001-char-scanner.patch
+    - 0002-fix-stdcxx17-binary-function.patch
+
 
 build:
-  number: 9
+  number: 10
 
 requirements:
   build:
