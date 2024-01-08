@@ -10,6 +10,7 @@ mvn --batch-mode --projects=runtime/Java,tool -DskipTests install
 mkdir -p ${PREFIX}/lib ${PREFIX}/bin
 
 cp "${SRC_DIR}/tool/target/antlr4-${PKG_VERSION}-complete.jar" "${PREFIX}/lib/"
+ln -s "${PREFIX}/lib/antlr4-${PKG_VERSION}-complete.jar" "${PREFIX}/lib/antlr4.jar"
 
 echo '#!/bin/bash' > $PREFIX/bin/antlr4
 echo 'java -Xmx500M -cp "'$PREFIX'/lib/antlr4-'$PKG_VERSION'-complete.jar:$CLASSPATH" org.antlr.v4.Tool "$@"' >> $PREFIX/bin/antlr4
