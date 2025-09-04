@@ -7,9 +7,12 @@ if "%ARCH%"=="32" (
 
 copy %RECIPE_DIR%\antlr.vcxproj lib\cpp\ || exit 1
 
-msbuild.exe /p:Platform=%PLATFORM% /p:Configuration=Release lib\cpp\antlr.vcxproj
+msbuild.exe lib\cpp\antlr.vcxproj ^
+  /p:Platform=%PLATFORM% /p:Configuration=Release ^
+  /p:PlatformToolset=v144 ^
+  /p:CL_AdditionalOptions="/std:c++14 %(CL_AdditionalOptions)"
 if errorlevel 1 exit 1
 
-copy lib\cpp\x64\Release\antlr.lib %LIBRARY_LIB% || exit 1
+copy lib\cpp\%PLATFORM%\Release\antlr.lib %LIBRARY_LIB% || exit 1
 mkdir %LIBRARY_INC%\antlr\ || exit 1
 copy %SRC_DIR%\lib\cpp\antlr\*.hpp %LIBRARY_INC%\antlr\ || exit 1
