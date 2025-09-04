@@ -15,11 +15,9 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <OutputDirectory>release\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
     <CharacterSet>Unicode</CharacterSet>
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <IntermediateDirectory>release\</IntermediateDirectory>
     <PrimaryOutput>antlr</PrimaryOutput>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
@@ -39,9 +37,7 @@
     <ClCompile>
       <LanguageStandard>stdcpp14</LanguageStandard>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)antlr;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
-      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BrowseInformation>false</BrowseInformation>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -57,6 +53,7 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
       <WarningLevel>Level3</WarningLevel>
+      <UseFullPaths>true</UseFullPaths>
     </ClCompile>
     <Link>
       <IgnoreImportLibrary>true</IgnoreImportLibrary>
@@ -74,35 +71,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\ANTLRUtil.cpp" />
-    <ClCompile Include="src\ASTFactory.cpp" />
-    <ClCompile Include="src\ASTNULLType.cpp" />
-    <ClCompile Include="src\ASTRefCount.cpp" />
-    <ClCompile Include="src\BaseAST.cpp" />
-    <ClCompile Include="src\BitSet.cpp" />
-    <ClCompile Include="src\CharBuffer.cpp" />
-    <ClCompile Include="src\CharScanner.cpp" />
-    <ClCompile Include="src\CommonAST.cpp" />
-    <ClCompile Include="src\CommonASTWithHiddenTokens.cpp" />
-    <ClCompile Include="src\CommonHiddenStreamToken.cpp" />
-    <ClCompile Include="src\CommonToken.cpp" />
-    <ClCompile Include="src\InputBuffer.cpp" />
-    <ClCompile Include="src\LLkParser.cpp" />
-    <ClCompile Include="src\MismatchedCharException.cpp" />
-    <ClCompile Include="src\MismatchedTokenException.cpp" />
-    <ClCompile Include="src\NoViableAltException.cpp" />
-    <ClCompile Include="src\NoViableAltForCharException.cpp" />
-    <ClCompile Include="src\Parser.cpp" />
-    <ClCompile Include="src\RecognitionException.cpp" />
-    <ClCompile Include="src\String.cpp" />
-    <ClCompile Include="src\Token.cpp" />
-    <ClCompile Include="src\TokenBuffer.cpp" />
-    <ClCompile Include="src\TokenRefCount.cpp" />
-    <ClCompile Include="src\TokenStreamBasicFilter.cpp" />
-    <ClCompile Include="src\TokenStreamHiddenTokenFilter.cpp" />
-    <ClCompile Include="src\TokenStreamRewriteEngine.cpp" />
-    <ClCompile Include="src\TokenStreamSelector.cpp" />
-    <ClCompile Include="src\TreeParser.cpp" />
+    <ClCompile Include="src\*.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
