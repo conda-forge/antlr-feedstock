@@ -10,15 +10,17 @@ source:
   patches:
     - 0001-char-scanner.patch
     - 0002-fix-stdcxx17-binary-function.patch
+    - 0003-update-function-name-from-uncaught_exception.patch
 
 
 build:
-  number: 10
+  number: 11
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ stdlib('c') }}
     - make        # [unix]
     - gnuconfig   # [unix]
 
